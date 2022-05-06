@@ -27,6 +27,11 @@ def query(limit=50):
     return True, request.json()
 
 
+"""
+删除媒体库
+"""
+
+
 def refreshLibrary(refreshLibrary=True, itemId=None):
     url = base_url.format("")
     url += f"&refreshLibrary={refreshLibrary}&id={itemId}"
