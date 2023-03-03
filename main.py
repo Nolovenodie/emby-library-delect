@@ -56,7 +56,9 @@ if __name__ == "__main__":
     inQueue = Queue()
 
     #  获取媒体库
-    query = query(librarys)  # 发包获取
+    success, query = query(librarys)  # 发包获取
+    if not success:
+        exit(query)
     # with open("Query.json") as fp:  # 本地获取
     #     query = json.load(fp)
 
